@@ -8,6 +8,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -23,9 +24,9 @@ public class RecipeLookupViewController implements Initializable {
     private ImageView mealImageView;
 
     @FXML
-    void getSearchResults(ActionEvent event) {
-        mealsListView.getItems().addAll(APIUtility.getRecipeFromJSON().getSearch());
-
+    void getSearchResults(ActionEvent event) throws IOException, InterruptedException {
+        mealsListView.getItems().clear();
+        mealsListView.getItems().addAll(APIUtility.getMealFromAPI(searchTextField.getText()).getSearch());
     }
 
     @Override
