@@ -587,4 +587,9 @@ public class Meal {
     public void setDateModified(String dateModified) {
         this.dateModified = dateModified;
     }
+
+
+    public String toString(){
+        return String.format("%s",meal);
+    }
 }

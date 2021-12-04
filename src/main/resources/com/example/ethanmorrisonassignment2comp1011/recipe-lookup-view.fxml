@@ -1,14 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.ethanmorrisonassignment2comp1011.RecipeLookupView"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ethanmorrisonassignment2comp1011.RecipeLookupViewController">
+   <children>
+      <BorderPane prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <Label text="Recipe Look Up" BorderPane.alignment="CENTER" />
+         </top>
+         <right>
+            <ListView fx:id="mealsListView" prefHeight="382.0" prefWidth="253.0" BorderPane.alignment="CENTER" />
+         </right>
+         <left>
+            <VBox prefHeight="334.0" prefWidth="150.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label text="Meal Name:" />
+                  <TextField fx:id="searchTextField" />
+                  <Button mnemonicParsing="false" onAction="#getSearchResults" text="Search" />
+               </children>
+            </VBox>
+         </left>
+         <center>
+            <ImageView fx:id="mealImageView" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+   </children>
 </AnchorPane>
