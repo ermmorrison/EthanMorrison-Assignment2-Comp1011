@@ -4,14 +4,7 @@ import com.google.gson.annotations.SerializedName;
 
 public class Response {
 
-    @SerializedName("")
-    private School[] search;
+    @SerializedName("meals")
+    private Meal[] search;
 
-    public School[] getSearch() {
-        return search;
-    }
-
-    public void setSearch(School[] search) {
-        this.search = search;
-    }
 }

@@ -4,6 +4,6 @@ module com.example.ethanmorrisonassignment2comp1011 {
     requires com.google.gson;
 
 
-    opens com.example.ethanmorrisonassignment2comp1011 to javafx.fxml;
+    opens com.example.ethanmorrisonassignment2comp1011 to javafx.fxml, com.google.gson;
     exports com.example.ethanmorrisonassignment2comp1011;
 }
